@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+
 	"github.com/hyperledger/fabric-chaincode-go/shim"
 	"github.com/hyperledger/fabric-protos-go/peer"
 )
@@ -42,9 +43,9 @@ func (smartcontract *SmartContract) Init(stub shim.ChaincodeStubInterface) peer.
 	fmt.Println("=============== Start Init ===============")
 
 	candidates := []Candidate{
-		Candidate{CandidateID: "100", Name: "Finis Valorum", TotalVote: 0},
-		Candidate{CandidateID: "200", Name: "Palpatine", TotalVote: 0},
-		Candidate{CandidateID: "300", Name: "Bail Antilles", TotalVote: 0},
+		{CandidateID: "100", Name: "Finis Valorum", TotalVote: 0},
+		{CandidateID: "200", Name: "Palpatine", TotalVote: 0},
+		{CandidateID: "300", Name: "Bail Antilles", TotalVote: 0},
 	}
 
 	i := 0
